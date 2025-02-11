@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\scene">
+      <UniqueIdentifier>{fb72cf7e-53a8-4513-b2fa-0a4097d1343d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{3e362727-5184-4c86-818a-7af65520cddd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\player">
+      <UniqueIdentifier>{6d5faed8-9b6c-4d25-8a0b-53134bbeb9bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\bullet">
+      <UniqueIdentifier>{cfcdc2b3-6b1c-41b2-9c97-dadbc7fd7be6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="scene.h">
+      <Filter>头文件\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuScene.h">
+      <Filter>头文件\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene.h">
+      <Filter>头文件\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>头文件\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectScene.h">
+      <Filter>头文件\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="atlas.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="animation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vector2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="platform.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="player.h">
+      <Filter>头文件\player</Filter>
+    </ClInclude>
+    <ClInclude Include="peashooter_player.h">
+      <Filter>头文件\player</Filter>
+    </ClInclude>
+    <ClInclude Include="sunflower_player.h">
+      <Filter>头文件\player</Filter>
+    </ClInclude>
+    <ClInclude Include="player_id.h">
+      <Filter>头文件\player</Filter>
+    </ClInclude>
+    <ClInclude Include="bullet.h">
+      <Filter>头文件\bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="pea_bullet.h">
+      <Filter>头文件\bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="sun_bullet.h">
+      <Filter>头文件\bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="sun_bullet_ex.h">
+      <Filter>头文件\bullet</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GameTest.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\1P_cursor.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\1P_desc.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\1P_selector_btn_down.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\1P_selector_btn_idle.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\1P_winner.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\2P.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\2P_cursor.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\2P_desc.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\2P_selector_btn_down.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\2P_selector_btn_idle.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\2P_winner.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\avatar_peashooter.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\avatar_sunflower.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\gravestone.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\hills.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\jump_effect_1.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\jump_effect_2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\jump_effect_3.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\jump_effect_4.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\jump_effect_5.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\land_effect_1.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\land_effect_2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\menu_background.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\pea.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\pea_break_1.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\pea_break_2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\pea_break_3.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\peashooter_attack_ex_1.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\peashooter_attack_ex_2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\peashooter_attack_ex_3.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\peashooter_die_1.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\peashooter_die_2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\peashooter_die_3.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\peashooter_die_4.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\peashooter_idle_1.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\peashooter_idle_2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\peashooter_idle_3.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\peashooter_idle_4.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\peashooter_idle_5.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\peashooter_idle_6.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\peashooter_idle_7.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\peashooter_idle_8.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\peashooter_idle_9.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\peashooter_run_1.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\peashooter_run_2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\peashooter_run_3.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\peashooter_run_4.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\peashooter_run_5.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\peashooter_selector_background.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\platform_large.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\platform_small.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\run_effect_1.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\run_effect_2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\run_effect_3.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\run_effect_4.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\selector_background.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\selector_tip.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sky.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_1.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_3.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_4.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_5.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_ex_1.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_ex_2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_ex_3.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_ex_4.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_ex_5.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_ex_explode_1.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_ex_explode_2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_ex_explode_3.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_ex_explode_4.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_ex_explode_5.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_explode_1.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_explode_2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_explode_3.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_explode_4.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_explode_5.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_text_1.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_text_2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_text_3.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_text_4.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_text_5.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sun_text_6.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_attack_ex_1.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_attack_ex_2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_attack_ex_3.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_attack_ex_4.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_attack_ex_5.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_attack_ex_6.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_attack_ex_7.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_attack_ex_8.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_attack_ex_9.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_die_1.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_die_2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_idle_1.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_idle_2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_idle_3.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_idle_4.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_idle_5.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_idle_6.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_idle_7.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_idle_8.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_run_1.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_run_2.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_run_3.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_run_4.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_run_5.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\sunflower_selector_background.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\VS.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="resources\winnner_bar.png">
+      <Filter>resources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="resources\bgm_game.mp3">
+      <Filter>resources</Filter>
+    </Media>
+    <Media Include="resources\bgm_menu.mp3">
+      <Filter>resources</Filter>
+    </Media>
+    <Media Include="resources\pea_break_1.mp3">
+      <Filter>resources</Filter>
+    </Media>
+    <Media Include="resources\pea_break_2.mp3">
+      <Filter>resources</Filter>
+    </Media>
+    <Media Include="resources\pea_break_3.mp3">
+      <Filter>resources</Filter>
+    </Media>
+    <Media Include="resources\pea_shoot_1.mp3">
+      <Filter>resources</Filter>
+    </Media>
+    <Media Include="resources\pea_shoot_2.mp3">
+      <Filter>resources</Filter>
+    </Media>
+    <Media Include="resources\pea_shoot_ex.mp3">
+      <Filter>resources</Filter>
+    </Media>
+    <Media Include="resources\sun_explode.mp3">
+      <Filter>resources</Filter>
+    </Media>
+    <Media Include="resources\sun_explode_ex.mp3">
+      <Filter>resources</Filter>
+    </Media>
+    <Media Include="resources\sun_text.mp3">
+      <Filter>resources</Filter>
+    </Media>
+    <Media Include="resources\ui_confirm.wav">
+      <Filter>resources</Filter>
+    </Media>
+    <Media Include="resources\ui_switch.wav">
+      <Filter>resources</Filter>
+    </Media>
+    <Media Include="resources\ui_win.wav">
+      <Filter>resources</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="resources\IPix.ttf">
+      <Filter>resources</Filter>
+    </Font>
+  </ItemGroup>
+</Project>
