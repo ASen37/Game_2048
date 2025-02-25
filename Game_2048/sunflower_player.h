@@ -12,6 +12,8 @@ extern Atlas atlas_sunflower_run_right;
 extern Atlas atlas_sunflower_attack_ex_left;
 extern Atlas atlas_sunflower_attack_ex_right;
 extern Atlas atlas_sun_text;
+extern Atlas atlas_sunflower_die_left;
+extern Atlas atlas_sunflower_die_right;
 
 extern Player* player_1;
 extern Player* player_2;
@@ -19,8 +21,10 @@ extern Player* player_2;
 class SunflowerPlayer : public Player
 {
 public:
-	SunflowerPlayer()
+	SunflowerPlayer(bool facing_right = true) : Player(is_facing_right)
 	{
+		//* 设置动画图集，依次为：
+		//* 默认朝向、奔跑、攻击、死亡、技能动画及其文字动画
 		animation_idel_left.set_atlas(&atlas_sunflower_idle_left);
 		animation_idel_right.set_atlas(&atlas_sunflower_idle_right);
 		animation_run_left.set_atlas(&atlas_sunflower_run_left);
@@ -28,7 +32,10 @@ public:
 		animation_attack_ex_left.set_atlas(&atlas_sunflower_attack_ex_left);
 		animation_attack_ex_right.set_atlas(&atlas_sunflower_attack_ex_right);
 		animation_sun_text.set_atlas(&atlas_sun_text);
+		animation_die_left.set_atlas(&atlas_sunflower_die_left);
+		animation_die_right.set_atlas(&atlas_sunflower_die_right);
 
+		// 设置动画间隔
 		animation_idel_left.set_interval(75);
 		animation_idel_right.set_interval(75);
 		animation_run_left.set_interval(75);
@@ -36,11 +43,16 @@ public:
 		animation_attack_ex_left.set_interval(100);
 		animation_attack_ex_right.set_interval(100);
 		animation_sun_text.set_interval(100);
+		animation_die_left.set_interval(150);
+		animation_die_right.set_interval(150);
 
 		animation_attack_ex_left.set_loop(false);
 		animation_attack_ex_right.set_loop(false);
 		animation_sun_text.set_loop(false);
+		animation_die_left.set_loop(false);
+		animation_die_right.set_loop(false);
 
+		// 设置动画播放完毕后的回调函数
 		animation_attack_ex_left.set_callback([&]()
 			{
 				is_attacking_ex = false;
@@ -127,13 +139,12 @@ public:
 	}
 	
 private:
-	const float speed_sun_ex = 0.15f;
-	const Vector2 velocity_sun = { 0.25f, -0.5f };
+	const float speed_sun_ex = 0.15f; // 超级太阳下落速度
+	const Vector2 velocity_sun = { 0.25f, -0.5f }; // 普通攻击初始速度
 
 private:
 	Animation animation_sun_text;
 	bool is_sun_text_visible = false;
-
 };
 
 

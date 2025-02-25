@@ -39,6 +39,8 @@ extern Atlas atlas_sunflower_idle_right;
 // 外部声明的游戏角色头像图像资源
 extern IMAGE img_avatar_peashooter;
 extern IMAGE img_avatar_sunflower;
+extern IMAGE* img_player_1_avatar;
+extern IMAGE* img_player_2_avatar;
 
 // 外部声明的游戏场景管理器
 extern SceneManager scene_manager;
@@ -248,13 +250,16 @@ public:
 	}
 
 	void on_exit() {
+		mciSendString(_T("stop bgm_menu"), NULL, 0, NULL);
 		switch (player_type_1)
 		{
 		case PlayerType::Peashooter:
 			player_1 = new PeashooterPlayer();
+			img_player_1_avatar = &img_avatar_peashooter;
 			break;
 		case PlayerType::Sunflower:
 			player_1 = new SunflowerPlayer();
+			img_player_1_avatar = &img_avatar_sunflower;
 			break;
 		}
 		player_1->set_id(PlayerID::P1);
@@ -262,10 +267,12 @@ public:
 		switch (player_type_2)
 		{
 		case PlayerType::Peashooter:
-			player_2 = new PeashooterPlayer();
+			player_2 = new PeashooterPlayer(false);
+			img_player_2_avatar = &img_avatar_peashooter;
 			break;
 		case PlayerType::Sunflower:
-			player_2 = new SunflowerPlayer();
+			player_2 = new SunflowerPlayer(false);
+			img_player_2_avatar = &img_avatar_sunflower;
 			break;
 		}
 		player_2->set_id(PlayerID::P2);

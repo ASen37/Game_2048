@@ -14,6 +14,7 @@ public:
 
 	void reset() { //重置当前播放状态
 		timer = 0;
+		idx_frame = 0;
 		interval = 0;
 	}
 
@@ -64,6 +65,7 @@ public:
 	void set_callback(std::function<void()> callback) { //设置类内回调函数
 		this->callback = callback;
 	}
+
 private:
 	int timer = 0; //计时器
 	int interval = 0; //帧间隔

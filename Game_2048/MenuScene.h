@@ -11,6 +11,7 @@
 extern IMAGE img_menu_background;
 extern SceneManager scene_manager;
 
+extern int is_need_switch_keyboard;
 class MenuScene : public Scene
 {
 public:
@@ -22,13 +23,10 @@ public:
 	}
 
 	void on_exit() {
-		mciSendString(_T("stop bgm_menu"), NULL, 0, NULL);
-
-		// 模拟按键CTRL + SPACE 切换键盘到英文模式
-		keybd_event(VK_CONTROL, 0, 0, 0);
-		keybd_event(VK_SPACE, 0, 0, 0);
-		keybd_event(VK_CONTROL, 0, KEYEVENTF_KEYUP, 0);
-		keybd_event(VK_SPACE, 0, KEYEVENTF_KEYUP, 0);
+		// 除了第一次进入场景需要切换键盘外，其他在程序运行时再次进入都不再需要切换键盘
+		if(is_need_switch_keyboard == 0)
+			switch_keyboard();
+		is_need_switch_keyboard++;
 	}
 
 	void on_input(const ExMessage& msg){
@@ -39,9 +37,7 @@ public:
 		}
 	}
 
-	void on_update(int delta){
-		
-	}
+	void on_update(int delta){ }
 
 	void on_draw(const Camera& camera){
 		putimage(0, 0, &img_menu_background);

@@ -10,28 +10,43 @@ extern Atlas atlas_peashooter_run_left;
 extern Atlas atlas_peashooter_run_right;
 extern Atlas atlas_peashooter_attack_ex_left;
 extern Atlas atlas_peashooter_attack_ex_right;
+extern Atlas atlas_peashooter_die_left;
+extern Atlas atlas_peashooter_die_right;
 
 class PeashooterPlayer : public Player
 {
 public:
-	PeashooterPlayer()
+	PeashooterPlayer(bool facing_right = true) : Player(facing_right)
 	{
+		//* 设置动画图集，依次为：
+		//* 默认朝向、奔跑朝向、技能动画朝向、死亡朝向
 		animation_idel_left.set_atlas(&atlas_peashooter_idle_left);
 		animation_idel_right.set_atlas(&atlas_peashooter_idle_right);
 		animation_run_left.set_atlas(&atlas_peashooter_run_left);
 		animation_run_right.set_atlas(&atlas_peashooter_run_right);
 		animation_attack_ex_left.set_atlas(&atlas_peashooter_attack_ex_left);
 		animation_attack_ex_right.set_atlas(&atlas_peashooter_attack_ex_right);
-
+		animation_die_left.set_atlas(&atlas_peashooter_die_left);
+		animation_die_right.set_atlas(&atlas_peashooter_die_right);
+		
+		//* 设置动画帧间隔，依次为：
+		//* 默认朝向、奔跑朝向、技能动画朝向、死亡朝向
 		animation_idel_left.set_interval(75);
 		animation_idel_right.set_interval(75);
 		animation_run_left.set_interval(75);
 		animation_run_right.set_interval(75);
 		animation_attack_ex_left.set_interval(75);
 		animation_attack_ex_right.set_interval(75);
+		animation_die_left.set_interval(150);
+		animation_die_right.set_interval(150);
+
+		animation_die_left.set_loop(false);
+		animation_die_right.set_loop(false);
 
 		size = { 96 , 96 };
 
+		//* 设置定时器间隔及其回调函数，依次为：
+		//* 攻击技能动画、生成豌豆子弹
 		timer_attack_ex.set_wait_time(attack_ex_duration);
 		timer_attack_ex.set_one_shot(true);
 		timer_attack_ex.set_callback([&]() { is_attacking_ex = false; });
@@ -53,10 +68,10 @@ public:
 		}
 	}
 
-	//void on_draw(const Camera& camera)
-	//{
-	//	Player::on_draw(camera);
-	//}
+	void on_draw(const Camera& camera)
+	{
+		Player::on_draw(camera);
+	}
 
 	void on_attack()
 	{

@@ -99,6 +99,11 @@ bool is_debug = false;
 Player* player_1 = nullptr;
 Player* player_2 = nullptr;
 
+IMAGE* img_player_1_avatar = nullptr;
+IMAGE* img_player_2_avatar = nullptr;
+
+int is_need_switch_keyboard = 0; // 是否需要切换键盘
+
 // 反转图集函数
 void flip_atlas(Atlas& src, Atlas& dst)
 {
@@ -248,8 +253,6 @@ int main() {
 		if (frame_delta_time < 1000 / FPS)
 			Sleep(1000 / FPS - frame_delta_time);
 	}
-
-
 
 	EndBatchDraw();
 
