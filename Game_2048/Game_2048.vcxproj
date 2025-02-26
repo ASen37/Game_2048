@@ -31,6 +31,7 @@
     <ClInclude Include="platform.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="player_id.h" />
+    <ClInclude Include="resource1.h" />
     <ClInclude Include="scene.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="SelectScene.h" />
@@ -49,6 +50,7 @@
     <ResourceCompile Include="GameTest.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\..\..\壁纸\img_ico.ico" />
     <Image Include="resources\1P_cursor.png" />
     <Image Include="resources\1P_desc.png" />
     <Image Include="resources\1P_selector_btn_down.png" />

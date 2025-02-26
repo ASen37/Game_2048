@@ -16,6 +16,7 @@ extern IMAGE img_platform_small; //小型平台图片
 
 extern Camera main_camera; // 主摄像机
 extern SceneManager scene_manager;
+extern Scene* menu_scene;
 extern std::vector<Platform> platform_list;
 
 extern Player* player_1;
@@ -138,8 +139,10 @@ public:
 			{
 				is_debug = !is_debug;
 			}
-			else if(msg.vkcode == VK_ESCAPE) // ESC 键退出
+			else if(msg.vkcode == VK_ESCAPE) // ESC 键返回
 			{
+				mciSendString(_T("stop bgm_game"), NULL, 0, NULL);
+				menu_scene->on_enter();
 				scene_manager.switch_to(SceneManager::SceneType::Selector);
 			}
 			break;

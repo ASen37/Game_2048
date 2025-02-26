@@ -144,6 +144,9 @@ public:
 				scene_manager.switch_to(SceneManager::SceneType::Game);
 				mciSendString(_T("play ui_confirm from 0"), NULL, 0, NULL);
 				break;
+			case VK_ESCAPE: // 退出键退出游戏
+				exit(0);
+				break;
 			}
 			break;
 		default:

@@ -215,11 +215,12 @@ void load_game_resources()
 int main() {
 	ExMessage msg;
 	const int FPS = 60;
-	initgraph(1280, 720, EW_SHOWCONSOLE);
+	initgraph(1280, 720);
+	HWND hwnd = GetHWnd();
+	SetWindowText(hwnd, _T("植物明星大乱斗"));
 
 	settextstyle(28, 0, _T("IPix"));
 	setbkmode(TRANSPARENT);
-
 	load_game_resources();
 	BeginBatchDraw();
 	
@@ -227,12 +228,10 @@ int main() {
 	game_scene = new GameScene();
 	select_scene = new SelectScene();
 	scene_manager.set_current_scene(menu_scene);
-	//scene_manager.set_current_scene(game_scene);
 
 	while(true)
 	{
 		DWORD frame_start_time = GetTickCount();
-
 		while (peekmessage(&msg))
 		{
 			scene_manager.on_input(msg);
@@ -246,7 +245,6 @@ int main() {
 		cleardevice();
 		scene_manager.on_draw(main_camera);
 		
-
 		FlushBatchDraw();
 		DWORD frame_end_time = GetTickCount();
 		DWORD frame_delta_time = frame_end_time - frame_start_time;
