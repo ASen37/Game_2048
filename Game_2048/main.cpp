@@ -215,9 +215,10 @@ void load_game_resources()
 int main() {
 	ExMessage msg;
 	const int FPS = 60;
-	initgraph(1280, 720);
+	initgraph(1280, 720, 1);
+	FreeConsole();
 	HWND hwnd = GetHWnd();
-	SetWindowText(hwnd, _T("植物明星大乱斗"));
+	SetWindowText(hwnd, _T("龙日葵与婉逗射手"));
 
 	settextstyle(28, 0, _T("IPix"));
 	setbkmode(TRANSPARENT);

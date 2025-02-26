@@ -14,7 +14,7 @@ public:
 	SunBullet()
 	{
 		size = { 96, 96 };
-		damage = 20;
+		damage = 15;
 
 		animation_idle.set_atlas(&atlas_sun);
 		animation_idle.set_interval(50);
