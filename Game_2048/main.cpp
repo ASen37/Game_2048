@@ -212,11 +212,11 @@ void load_game_resources()
 
 }
 
-int main() {
+int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
 	ExMessage msg;
 	const int FPS = 60;
-	initgraph(1280, 720, 1);
-	FreeConsole();
+	initgraph(1280, 720);
+
 	HWND hwnd = GetHWnd();
 	SetWindowText(hwnd, _T("龙日葵与婉逗射手"));
 
@@ -254,6 +254,13 @@ int main() {
 	}
 
 	EndBatchDraw();
+	closegraph();
+	delete menu_scene;
+	delete game_scene;
+	delete select_scene;
+	menu_scene = nullptr;
+	game_scene = nullptr;
+	select_scene = nullptr;
 
 	return 0;
 }
